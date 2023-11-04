@@ -26,7 +26,7 @@ function addSpending(spending) {
 
     // create a new container item for new spending
     var newContainer = document.createElement("div");
-    newContainer.className = "container";
+    newContainer.className = "transaction";
 
     //create a new Text node with the corresponding title
     const titleTextNode = document.createTextNode("Spending type:" + buttonId);

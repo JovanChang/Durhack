@@ -7,7 +7,7 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "Saving",
-    data: [130, 169, 144, 124],
+    data: [130, 169, 124, 124],
     lineTension: 0,
     fill: false,
     borderColor: '#769D93',
@@ -16,7 +16,7 @@ var dataFirst = {
 
 var dataSecond = {
     label: "Expense",
-    data: [100, 59, 64, 54],
+    data: [127, 159, 114, 130],
     lineTension: 0,
     fill: false,
   borderColor: '#EF8A9A',
@@ -24,7 +24,7 @@ var dataSecond = {
   };
 
 var Data = {
-  labels: ["Jan", "Feb", "March", "April"],
+  labels: ["Week1", "Week2", "Week3", "Week4"],
   datasets: [dataFirst, dataSecond]
 };
 
@@ -41,15 +41,31 @@ var chartOptions = {
       xAxes: [{
           gridLines: {
               display:false
-          }
+          },
+          position: "top"
       }],
       yAxes: [{
           gridLines: {
               display:false
-          }   
+          },
+          ticks: {
+            display: false
+          }
       }]
   },
   responsive: true,
+  plugins: {
+    tooltip: {
+        callbacks: {
+            label: function (tooltipItem, data) {
+                var label = myChart.data.labels[1.0];
+                console.log("2");
+                return 0;
+            }
+        }
+    }
+}
+  
 };
 
 var lineChart = new Chart(Canvas, {
