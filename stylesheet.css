@@ -2,7 +2,7 @@
     --background: #F6CECC;
     --button: #F9E1DF;
     --secondary: #EF8A9A;
-    --sharp: #F9E1DF;
+    --sharp: #FAB512;
     --breakpoint-xs:0;
     --breakpoint-sm:576px;
     --breakpoint-md:768px;
@@ -14,7 +14,7 @@ body{
   background-color: var(--background);
 }
 
-body div{
+body > div{
   margin: 0 50px;
 }
   
@@ -50,8 +50,49 @@ body div{
   text-decoration: none;
 }
 
-.cards a i{
+.cards > a > i{
   font-size: 100px;
   color: black;
   margin: auto auto;
+}
+
+.amount > div{
+  display: flex;
+  background-color: var(--button);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  height: 70px;
+}
+
+.amount > div > button{
+  background-color: var(--button);
+	color: inherit;
+  font-size: 30px;
+  text-align: center;
+  margin: auto 0;
+  border: none;
+  padding: 0%;
+}
+
+.amount > div > .active{
+  border-bottom: 5px solid var(--sharp);
+}
+
+#piggyBank:active{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake{
+  0%{transform: translate(1px,1px) rotate(0deg);}
+  10%{transform: translate(-1px,-2px) rotate(-1deg);}
+  20%{transform: translate(-3px,0px) rotate(1deg);}
+  30%{transform: translate(3px,2px) rotate(0deg);}
+  40%{transform: translate(1px,-1px) rotate(1deg);}
+  50%{transform: translate(-1px,2px) rotate(-1deg);}
+  60%{transform: translate(-3px,1px) rotate(0deg);}
+  70%{transform: translate(3px,1px) rotate(-1deg);}
+  80%{transform: translate(-1px,-1px) rotate(1deg);}
+  90%{transform: translate(1px,2px) rotate(0deg);}
+  100%{transform: translate(1px,-2px) rotate(-1deg);}
 }
