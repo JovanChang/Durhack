@@ -12,3 +12,7 @@
 .amtMoney {
     text-align: center;
 }
+#piggyBank {
+    max-width: 100%;
+    height: auto;
+}
