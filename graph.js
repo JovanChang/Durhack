@@ -2,55 +2,58 @@
 
 var Canvas = document.getElementById("myChart");
 
-Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontFamily = "Inter";
 Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "Saving",
-    data: [200, 169, 144, 124, 210, 160, 134, 150, 108, 180, 190, 210],
+    data: [130, 169, 144, 124],
     lineTension: 0,
     fill: false,
-    borderColor: '#769D93'
+    borderColor: '#769D93',
+    backgroundColor: "#42887C80"
   };
 
 var dataSecond = {
     label: "Expense",
-    data: [100, 59, 64, 54, 28, 89, 54, 100, 88, 90, 80, 50],
+    data: [100, 59, 64, 54],
     lineTension: 0,
     fill: false,
-  borderColor: '#EF8A9A'
+  borderColor: '#EF8A9A',
+  backgroundColor: "#EF8A9A"
   };
 
 var Data = {
-  labels: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  labels: ["Jan", "Feb", "March", "April"],
   datasets: [dataFirst, dataSecond]
 };
 
 var chartOptions = {
   legend: {
-    display: true,
-    position: 'top',
+    display: false,
+    position: 'bottom',
     labels: {
       boxWidth: 80,
       fontColor: 'white'
+    }
     },
     scales: {
-         x: {
-           grid: {
-             display: false
-           }
-         },
-         y: {
-           grid: {
-             display: false
-           }
-         }
-        }
-    }
+      xAxes: [{
+          gridLines: {
+              display:false
+          }
+      }],
+      yAxes: [{
+          gridLines: {
+              display:false
+          }   
+      }]
+  },
+  responsive: true,
 };
 
 var lineChart = new Chart(Canvas, {
-  type: 'line',
+  type: 'bar',
   data: Data,
   options: chartOptions
 });
