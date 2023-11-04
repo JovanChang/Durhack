@@ -1,3 +1,14 @@
+:root{
+    --background: #F6CECC;
+    --button: #F9E1DF;
+    --secondary: #EF8A9A;
+    --sharp: #F9E1DF;
+    --breakpoint-xs:0;
+    --breakpoint-sm:576px;
+    --breakpoint-md:768px;
+    --breakpoint-lg:992px;
+    --breakpoint-xl:1200px;
+  }
 .amtMoney {
     text-align: center;
 }
