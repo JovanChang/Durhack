@@ -162,6 +162,7 @@ canvas{
   width: fit-content;
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 15px;
   background-color: var(--correct);
   padding: 10px 30px;
   border-radius: 50px;
@@ -260,7 +261,7 @@ input {
   text-align: center;
   margin: 5px 0;
   border: none;
-  padding: 10px 20px;
+  padding: 10px20px;
   border: none;
   font-size: 30px;
   margin-left: 20px;
