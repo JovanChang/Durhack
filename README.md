@@ -9,7 +9,7 @@ For the app, when you log in to the account, you will see it separated into 3 se
 
 ## How we built it
 
-'''It is built on JS and HTML5'''
+It is built on JS and HTML5
 
 ## Challenges we ran into
 
