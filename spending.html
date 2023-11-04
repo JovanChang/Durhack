@@ -12,18 +12,29 @@
 
     </div>
     <!--my spending-->
-    <div class="container">
-        <div class="row row-cols-1">
-            <div class="col" id="shopping"></div>
-            <div class="col" id="food"></div>
-            <div class="col" id="transport"></div>
+    <div class="container" id="spendingList">
+        <!--make sure every row has only one contaienr-->
+        <div id="" class="row row-cols-1">
+            
         </div>
     </div>
     <!--add spending bar-->
     <div class="container">
-        <div class="row">
-            <div class="col"></div>
+        <button id="spending" type="submit" onclick="addSpending()">
+            <img src="image/cart.svg">
+        </button>
+        <button id="food" type="submit" onclick="addSpending()">
+            <img src="image/cart.svg">
+        </button>
+        <button id="transport" type="submit" onclick="addSpending()">
+            <img src="image/cart.svg">
+        </button>
+
+        <label for="amt">Amount:</label>
+        <input type="number" name="amt" id="amt">
+        <input type="submit" value="+">
         </div>
     </div>
+    <script src="spending.js"></script>
 </body>
 </html>
