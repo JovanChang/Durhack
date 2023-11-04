@@ -252,3 +252,16 @@ input {
   justify-content: space-between;
   font-size: 20px;
 }
+
+#minus{
+  background-color: var(--button);
+	color: none;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px 0;
+  border: none;
+  padding: 10px 20px;
+  border: none;
+  font-size: 30px;
+  margin-left: 20px;
+}

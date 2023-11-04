@@ -29,6 +29,21 @@ function addValue() {
   return 
 }
 
+function minusValue() {
+  var active = btnContainer.getElementsByClassName("active")[0]
+  var selected = parseFloat(active.id)
+  var curr = parseFloat(localStorage.current.replace("£", " "))
+  console.log(selected)
+  
+  curr -= (selected)
+  curr = parseFloat(curr)
+  localStorage.current = "£" + curr.toFixed(2);
+  console.log(localStorage.current)
+  getcurrent();
+  return 
+}
+
+
 
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -45,13 +60,14 @@ image.addEventListener("click", function(){
 
 
 //DELETE THIS THIS IS FOR DEV!!!!!!!!!!!!!!!!!!!!!!
-const reset = document.getElementById("reset");
+const reset = document.getElementById("minus");
 
 reset.addEventListener("click", setcurrent);
 
 function setcurrent() {
-    localStorage.setItem("current", "£100");
+    // localStorage.setItem("current", "£100");
     
-    const current = document.getElementById("current");
-    current.textContent = localStorage.getItem("current");
+    // const current = document.getElementById("current");
+    // current.textContent = localStorage.getItem("current");
+    minusValue()
     }
