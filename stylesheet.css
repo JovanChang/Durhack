@@ -74,7 +74,7 @@ body > div{
   padding: 0%;
 }
 
-.amount > div > .active{
+.amount > div > .active, .button:hover{
   border-bottom: 5px solid var(--sharp);
 }
 
