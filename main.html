@@ -5,65 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kids Save</title>
-    <link rel="stylesheet" href="css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/9bb1e21f11.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="bg">
 <!--Header Piggy bank and the amount of money-->
-    <h1 class="amtMoney">Amount of money</h1>
-    <img id="piggyBank" src="image\piggy bank png.png" alt="oops something went wrong :( ">
+    <div>
+        <h1 id="current">£100</h1>
+    </div>
+    <div class="piggyBank">
+        <img id="piggyBank" src="image\piggy bank png.png">
+    </div>
 <!--4 buttons-->
-<!--limit and spending-->
-    <div class="container-fluid d-flex align-content-start flex-wrap">
-        <!--limit-->
-        <div class="row row-cols-2">
-            <div class="col-sm-6" id="limit">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Limit</h5>
-                    <p class="card-text">Here is an overview of your Limit</p>
-                    <a href="limit.html" class="btn btn-primary">Go to fancy graph</a>
-                </div>
-            </div>
-        <!--spending-->
-            <div class="col-sm-6" id="spending">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Spending</h5>
-                    <p class="card-text">Here is an overview of your spending</p>
-                    <a href="spending.html" class="btn btn-primary">Go to fancy graph</a>
-                </div>
-            </div>
-        </div>
+    <div class="cards">
+        <a class="saving col-5" href="saving.html">
+            <i class="fa-solid fa-sterling-sign"></i>
+        </a>
+        <a class="transactions col-5" href="spending.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a class="graph col-5" href="graph.html">
+            <i class="fa-solid fa-chart-simple"></i>
+        </a>
+        <a class="col-5" ref="">
+        </a>
     </div>
-<!--graph and others-->
-<div class="container-fluid d-flex align-content-start flex-wrap">
-    <!--graph-->
-    <div class="row row-cols-2">
-        <div class="col-sm-6" id="graph">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Graph</h5>
-                <p class="card-text">Here is an overview of your analysis</p>
-                <a href="graph.html" class="btn btn-primary">Go to fancy graph</a>
-            </div>
-        </div>
-    <!--spending-->
-        <div class="col-sm-6" id="others">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">others--</h5>
-                <p class="card-text">Here is an overview of your spending</p>
-                <a href="sth.html" class="btn btn-primary">Go to fancy graph</a>
-            </div>
-        </div>
-    </div>
-</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script src="index.js"></script>
   </body>

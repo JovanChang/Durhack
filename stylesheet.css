@@ -1,0 +1,57 @@
+:root{
+    --background: #F6CECC;
+    --button: #F9E1DF;
+    --secondary: #EF8A9A;
+    --sharp: #F9E1DF;
+    --breakpoint-xs:0;
+    --breakpoint-sm:576px;
+    --breakpoint-md:768px;
+    --breakpoint-lg:992px;
+    --breakpoint-xl:1200px;
+  }
+
+body{
+  background-color: var(--background);
+}
+
+body div{
+  margin: 0 50px;
+}
+  
+.piggyBank{
+  display: flex;
+  margin-bottom: 70px;
+}
+
+#piggyBank {
+  margin: 0 auto;
+  height: 300px;
+}
+
+#current{
+  margin-top: 20px;
+  font-size: 120px;
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards a{
+  height: 250px;
+  max-width: 250px;
+  background-color: var(--button);
+  margin: 10px 10px;
+  border-radius: 20%;
+  display: flex;
+  text-decoration: none;
+}
+
+.cards a i{
+  font-size: 100px;
+  color: black;
+  margin: auto auto;
+}
