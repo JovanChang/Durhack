@@ -17,26 +17,25 @@
         <h5 id="current"></h5>
 
     </div>
-    <div class="pol">£33</div>
     <div class="spentclass container">
 
-        <div class="type">
-            <button id="transport">
+        <div class="types">
+            <button id="transport" class="type">
                 <i class="fa-solid fa-bus"></i>
             </button>
-            <button id="snack">
+            <button id="snack" class="type">
                 <i class="fa-solid fa-cookie-bite"></i>
             </button>
-            <button id="play">
+            <button id="play" class="chosen type">
                 <i class="fa-solid fa-gamepad"></i>
             </button>
-            <button id="food">
+            <button id="food" class="type">
                 <i class="fa-solid fa-bowl-food"></i>
             </button>
         </div>
 
         <div>
-            <input type="number" name="amt" id="amt" placeholder="Amount:">
+            <input type="number" name="amt" id="amt" placeholder="Amount:" >
             <input type="click" id="add" value="+">
         </div>
 
@@ -45,8 +44,8 @@
     <!--my spending-->
     <div class="container" id="spendingList">
         <!--make sure every row has only one contaienr-->
-        <div id="" class="row row-cols-1">
-            <div id="selected div"></div>
+        <div id="tlist" class="row row-cols-1">
+            
             <div class="transaction">
                 <div class="logo">
                     <i class="fa-solid fa-bus"></i>

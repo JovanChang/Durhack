@@ -203,7 +203,7 @@ canvas{
   border-radius: 10px;
 }
 
-.type{
+.types{
   display: flex;
   justify-content: space-around;
 }
@@ -226,6 +226,7 @@ input {
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
+  width: 35px;
 }
 
 .transaction{
@@ -254,6 +255,8 @@ input {
   font-size: 20px;
 }
 
+
+
 #minus{
   background-color: var(--button);
 	color: none;
@@ -265,4 +268,8 @@ input {
   border: none;
   font-size: 30px;
   margin-left: 20px;
+}
+
+.chosen{
+  color: var(--correct);
 }

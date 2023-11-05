@@ -9,64 +9,105 @@ const transportBtn = document.getElementById("transport");
 const snackBtn = document.getElementById("snack");
 const playBtn = document.getElementById("play");
 const foodBtn = document.getElementById("food");
+var entered = 0
 
 //add preview of selected genre
 //addselected(x,y) parameters reference are below
 transportBtn.addEventListener("click", function() {
-    addSelected("transport", "fa-solid fa-bus")
+    transportBtn.classList.toggle("chosen")
+    playBtn.classList.remove("chosen")
+    snackBtn.classList.remove("chosen")
+    foodBtn.classList.remove("chosen")
 });
-snackBtn.addEventListener("click", function() { 
-    addSelected("snack", "fa-solid fa-cookie-bite")
+snackBtn.addEventListener("click", function() {
+    snackBtn.classList.toggle("chosen")
+    playBtn.classList.remove("chosen")
+    foodBtn.classList.remove("chosen")
+    transportBtn.classList.remove("chosen")
 });
 playBtn.addEventListener("click", function() {
-    addSelected("play", "fa-solid fa-gamepad")
+    playBtn.classList.toggle("chosen")
+    foodBtn.classList.remove("chosen")
+    snackBtn.classList.remove("chosen")
+    transportBtn.classList.remove("chosen")
 });
-foodBtn.addEventListener("click", function() { 
-    addSelected("food", "fa-solid fa-bowl-food")
+foodBtn.addEventListener("click", function() {
+    foodBtn.classList.toggle("chosen")
+    playBtn.classList.remove("chosen")
+    snackBtn.classList.remove("chosen")
+    transportBtn.classList.remove("chosen")
 });
+
+var addBtn = document.getElementById("add")
+addBtn.addEventListener('click', function(){
+    var now = document.getElementsByClassName("chosen")
+    var classes = String(now[0].childNodes[1].classList)
+    console.log(classes)
+    addSelected(now[0].id, classes)
+    var curr = parseFloat(localStorage.current.replace("£", " "))
+    console.log(entered)
+    
+    curr -= (entered)
+    curr = parseFloat(curr)
+    localStorage.current = "£" + curr.toFixed(2);
+    console.log(localStorage.current)
+    getcurrent();
+})
 
 //add style to the innerhtml via css pls @oscar
 //para x is the type of transaction and para y is the img class src
 function addSelected(x, y) { 
     console.log("addSelected() is called");
-    var selectedDiv = document.getElementById("selected div");
+    var selectedDiv = document.getElementById("tlist");
 
-    selectedDiv.innerHTML = `
-    <div class="logo">
-        <i class="${y}"></i>
-    </div>
-    <div class="traninfo">
-        <div>${x}</div>
-            <div id="spent">Please input the spending amount</div>
+    selectedDiv.innerHTML += `
+    <div class="transaction">
+        <div class="logo">
+            <i class="${y}"></i>
+        </div>
+        <div class="traninfo">
+            <div>${x}</div>
+                <div id="spent">£${entered}</div>
+        </div>
     </div>
     `;
-
 }
 
-const inputAmt = document.getElementById("add");
-var selectedDiv = document.getElementById("selected div");
-inputAmt.addEventListener("click", function(e) {
-    console.log("+ sign")
-    createSpending();
-});
+
+
+const inputAmt = document.getElementById("amt");
+
+inputAmt.addEventListener("input", e => {
+    entered = parseFloat(e.target.value)
+    console.log(entered)
+    return entered
+})
+
+// var selectedDiv = document.getElementById("selected div");
+// inputAmt.addEventListener("click", function(e) {
+//     console.log("+ sign")
+//     createSpending();
+// });
 //commit the preview into the spending list
-function createSpending() {
-    if (selectedDiv.innerHTML != ``) {
-        console.log("if statement passed");
-    var spendingAmt = document.getElementById("amt").value;
-    var specificDiv = document.querySelector(".traninfo #spent");
-    console.log(spendingAmt);
-    specificDiv.innerHTML = `£${spendingAmt}`;
-    var newContainer = document.createElement("div");
-    var copySelectedDiv = structuredClone(selectedDiv);
-    newContainer.appendChild(copySelectedDiv);
-    var confirmedDiv = document.getElementById("confirmed div");
-    confirmedDiv.appendChild(newContainer);
-    } else {
-        window.alert("Please select the spending type!")
-    }
+// function createSpending() {
+//     if (selectedDiv.innerHTML != ``) {
+//         console.log("if statement passed");
+//     var spendingAmt = document.getElementById("amt").value;
+//     var specificDiv = document.querySelector(".traninfo #spent");
+//     console.log(spendingAmt);
+//     specificDiv.innerHTML = `£${spendingAmt}`;
+//     var newContainer = document.createElement("div");
+//     var copySelectedDiv = structuredClone(selectedDiv);
+//     newContainer.appendChild(copySelectedDiv);
+//     var confirmedDiv = document.getElementById("confirmed div");
+//     confirmedDiv.appendChild(newContainer);
+//     } else {
+//         window.alert("Please select the spending type!")
+//     }
 
-}
+// }
+
+
 
 /* function addSpending(spending) {
     console.log('hi');
