@@ -15,6 +15,18 @@ body{
   background-color: var(--background);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.back{
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
 body > div{
   margin: 0 50px;
 }
@@ -150,6 +162,7 @@ canvas{
   width: fit-content;
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 15px;
   background-color: var(--correct);
   padding: 10px 30px;
   border-radius: 50px;
@@ -239,4 +252,17 @@ input {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
+}
+
+#minus{
+  background-color: var(--button);
+	color: none;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px 0;
+  border: none;
+  padding: 10px20px;
+  border: none;
+  font-size: 30px;
+  margin-left: 20px;
 }
