@@ -12,30 +12,30 @@
     <!--available balance-->
     <div id="amountWindow" class="container title">
         <p>Available balance</p>
-        <h1 id="amount"></h1>
+        <h5 id="current"></h5>
 
     </div>
 
     <div class="spentclass container">
 
         <div class="type">
-            <button id="spending" type="submit" onclick="addSpending()">
+            <button id="transport">
                 <i class="fa-solid fa-bus"></i>
             </button>
-            <button id="food" type="submit" onclick="addSpending()">
+            <button id="snack">
                 <i class="fa-solid fa-cookie-bite"></i>
             </button>
-            <button id="transport" type="submit" onclick="addSpending()">
+            <button id="play">
                 <i class="fa-solid fa-gamepad"></i>
             </button>
-            <button id="sth" type="submit" onclick="addSpending()">
+            <button id="food">
                 <i class="fa-solid fa-bowl-food"></i>
             </button>
         </div>
 
         <div>
             <input type="number" name="amt" id="amt" placeholder="Amount:">
-            <input type="submit" id="add" value="+">
+            <input type="click" id="add" value="+">
         </div>
 
     </div>
@@ -44,6 +44,7 @@
     <div class="container" id="spendingList">
         <!--make sure every row has only one contaienr-->
         <div id="" class="row row-cols-1">
+            <div id="selected div"></div>
             <div class="transaction">
                 <div class="logo">
                     <i class="fa-solid fa-bus"></i>
@@ -62,6 +63,7 @@
                     <div>£1.50</div>
                 </div>
             </div>
+            <div id="confirmed div"></div>
         </div>
     </div>
 
@@ -72,6 +74,5 @@
 
     <script src="spending.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="index.js"></script>
 </body>
 </html>
