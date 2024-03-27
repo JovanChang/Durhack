@@ -6,9 +6,9 @@ current.textContent = localStorage.getItem("current")
 window.onload = getcurrent;
 
 //active when clicking
-var btnContainer = document.getElementById("moneyDIV");
+let btnContainer = document.getElementById("moneyDIV");
 
-var btns = btnContainer.getElementsByClassName("col");
+let btns = btnContainer.getElementsByClassName("col");
 
 function selectedValue(id) {
   console.log(id)
@@ -16,9 +16,9 @@ function selectedValue(id) {
 }
 
 function addValue() {
-  var active = btnContainer.getElementsByClassName("active")[0]
-  var selected = parseFloat(active.id)
-  var curr = parseFloat(localStorage.current.replace("£", " "))
+  let active = btnContainer.getElementsByClassName("active")[0]
+  let selected = parseFloat(active.id)
+  let curr = parseFloat(localStorage.current.replace("£", " "))
   console.log(selected)
   
   curr += (selected)
@@ -30,9 +30,9 @@ function addValue() {
 }
 
 function minusValue() {
-  var active = btnContainer.getElementsByClassName("active")[0]
-  var selected = parseFloat(active.id)
-  var curr = parseFloat(localStorage.current.replace("£", " "))
+  let active = btnContainer.getElementsByClassName("active")[0]
+  let selected = parseFloat(active.id)
+  let curr = parseFloat(localStorage.current.replace("£", " "))
   console.log(selected)
   
   curr -= (selected)
@@ -45,9 +45,9 @@ function minusValue() {
 
 
 
-for (var i = 0; i < btns.length; i++) {
+for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
+      let current = document.getElementsByClassName("active");
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
     });

@@ -9,7 +9,7 @@ const transportBtn = document.getElementById("transport");
 const snackBtn = document.getElementById("snack");
 const playBtn = document.getElementById("play");
 const foodBtn = document.getElementById("food");
-var entered = 0
+let entered = 0
 
 //add preview of selected genre
 //addselected(x,y) parameters reference are below
@@ -38,13 +38,13 @@ foodBtn.addEventListener("click", function() {
     transportBtn.classList.remove("chosen")
 });
 
-var addBtn = document.getElementById("add")
+let addBtn = document.getElementById("add")
 addBtn.addEventListener('click', function(){
-    var now = document.getElementsByClassName("chosen")
-    var classes = String(now[0].childNodes[1].classList)
+    let now = document.getElementsByClassName("chosen")
+    let classes = String(now[0].childNodes[1].classList)
     console.log(classes)
     addSelected(now[0].id, classes)
-    var curr = parseFloat(localStorage.current.replace("£", " "))
+    let curr = parseFloat(localStorage.current.replace("£", " "))
     console.log(entered)
     
     curr -= (entered)
@@ -58,7 +58,7 @@ addBtn.addEventListener('click', function(){
 //para x is the type of transaction and para y is the img class src
 function addSelected(x, y) { 
     console.log("addSelected() is called");
-    var selectedDiv = document.getElementById("tlist");
+    let selectedDiv = document.getElementById("tlist");
 
     selectedDiv.innerHTML += `
     <div class="transaction">
@@ -83,7 +83,7 @@ inputAmt.addEventListener("input", e => {
     return entered
 })
 
-// var selectedDiv = document.getElementById("selected div");
+// let selectedDiv = document.getElementById("selected div");
 // inputAmt.addEventListener("click", function(e) {
 //     console.log("+ sign")
 //     createSpending();
@@ -92,14 +92,14 @@ inputAmt.addEventListener("input", e => {
 // function createSpending() {
 //     if (selectedDiv.innerHTML != ``) {
 //         console.log("if statement passed");
-//     var spendingAmt = document.getElementById("amt").value;
-//     var specificDiv = document.querySelector(".traninfo #spent");
+//     let spendingAmt = document.getElementById("amt").value;
+//     let specificDiv = document.querySelector(".traninfo #spent");
 //     console.log(spendingAmt);
 //     specificDiv.innerHTML = `£${spendingAmt}`;
-//     var newContainer = document.createElement("div");
-//     var copySelectedDiv = structuredClone(selectedDiv);
+//     let newContainer = document.createElement("div");
+//     let copySelectedDiv = structuredClone(selectedDiv);
 //     newContainer.appendChild(copySelectedDiv);
-//     var confirmedDiv = document.getElementById("confirmed div");
+//     let confirmedDiv = document.getElementById("confirmed div");
 //     confirmedDiv.appendChild(newContainer);
 //     } else {
 //         window.alert("Please select the spending type!")
@@ -112,19 +112,19 @@ inputAmt.addEventListener("input", e => {
 /* function addSpending(spending) {
     console.log('hi');
     //get the button id
-    var buttonId;
-    var buttons = document.querySelectorAll("button");
+    let buttonId;
+    let buttons = document.querySelectorAll("button");
 
     buttons.forEach(function(button) {
         button.addEventListener("click", function() {
-            var buttonId = button.id;
+            let buttonId = button.id;
             console.log("button id is:" + buttonId);
         });
     });
 
     //get input value in input bar
-    var numberInput = document.getElementById("amt");
-    var inputValue;
+    let numberInput = document.getElementById("amt");
+    let inputValue;
 
     //check if input exist, if not show error (does not work)
     if (numberInput) {
@@ -137,7 +137,7 @@ inputAmt.addEventListener("input", e => {
     }
 
     // create a new container item for new spending
-    var newContainer = document.createElement("div");
+    let newContainer = document.createElement("div");
     newContainer.className = "transaction";
 
     //create a new Text node with the corresponding title

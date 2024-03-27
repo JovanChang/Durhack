@@ -1,11 +1,11 @@
 // graph1 
 
-var Canvas = document.getElementById("myChart");
+let Canvas = document.getElementById("myChart");
 
 Chart.defaults.global.defaultFontFamily = "Inter";
 Chart.defaults.global.defaultFontSize = 18;
 
-var dataFirst = {
+let dataFirst = {
     label: "Saving",
     data: [130, 169, 124, 124],
     lineTension: 0,
@@ -14,7 +14,7 @@ var dataFirst = {
     backgroundColor: "#42887C80"
   };
 
-var dataSecond = {
+let dataSecond = {
     label: "Expense",
     data: [127, 159, 114, 130],
     lineTension: 0,
@@ -23,12 +23,12 @@ var dataSecond = {
   backgroundColor: "#EF8A9A"
   };
 
-var Data = {
+let Data = {
   labels: ["Week1", "Week2", "Week3", "Week4"],
   datasets: [dataFirst, dataSecond]
 };
 
-var chartOptions = {
+let chartOptions = {
   legend: {
     display: false,
     position: 'bottom',
@@ -58,7 +58,6 @@ var chartOptions = {
     tooltip: {
         callbacks: {
             label: function (tooltipItem, data) {
-                var label = myChart.data.labels[1.0];
                 console.log("2");
                 return 0;
             }
@@ -68,7 +67,7 @@ var chartOptions = {
   
 };
 
-var lineChart = new Chart(Canvas, {
+let lineChart = new Chart(Canvas, {
   type: 'bar',
   data: Data,
   options: chartOptions
